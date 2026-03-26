@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 1.5rem;
+    --background: 0.13 0 0;
+    --foreground: 0.985 0 0;
+    --card: 0.18 0 0;
+    --card-foreground: 0.985 0 0;
+    --popover: 0.18 0 0;
+    --popover-foreground: 0.985 0 0;
+    --primary: 0.85 0.18 95;
+    --primary-foreground: 0.13 0 0;
+    --secondary: 0.25 0 0;
+    --secondary-foreground: 0.985 0 0;
+    --muted: 0.22 0 0;
+    --muted-foreground: 0.55 0 0;
+    --accent: 0.85 0.18 95;
+    --accent-foreground: 0.13 0 0;
+    --destructive: 0.62 0.25 27;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.28 0 0;
+    --input: 0.25 0 0;
+    --ring: 0.85 0.18 95;
+    --chart-1: 0.85 0.18 95;
+    --chart-2: 0.65 0.28 350;
+    --chart-3: 0.78 0.15 195;
+    --chart-4: 0.82 0.17 90;
+    --chart-5: 0.65 0.25 300;
+    --sidebar: 0.16 0 0;
+    --sidebar-foreground: 0.985 0 0;
+    --sidebar-primary: 0.85 0.18 95;
+    --sidebar-primary-foreground: 0.13 0 0;
+    --sidebar-accent: 0.22 0 0;
+    --sidebar-accent-foreground: 0.985 0 0;
+    --sidebar-border: 0.28 0 0;
+    --sidebar-ring: 0.85 0.18 95;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.font-pixel {
+  font-family: "Press Start 2P", cursive;
+}
+
+.filter-scroll {
+  scrollbar-width: none;
+}
+.filter-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.85 0.18 95 / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px oklch(0.85 0.18 95 / 0.15);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
